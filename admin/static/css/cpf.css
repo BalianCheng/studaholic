@@ -1,0 +1,91 @@
+.table tbody > tr > td, .table tbody > tr > td div {
+    vertical-align: middle;
+}
+
+.table tbody > tr > td .tips {
+    line-height: 30px;
+}
+
+.table .title {
+    font-weight: bold;
+    background-color: #fafafa;
+}
+
+.input-inline {
+    margin-top: 6px;
+}
+
+#image-preview {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto;
+    border: 1px solid #ecf0f1;
+    position: relative;
+    overflow: hidden;
+    background-color: #ffffff;
+    color: #ecf0f1;
+}
+
+.cancel-recommend {
+    color: #d00000;
+}
+
+.blocked-content {
+    color: #6c6c6c;
+}
+
+.seo-category-list {
+
+}
+
+.seo-category-list a {
+    padding: 5px;
+    border-radius: 3px;
+    display: block;
+    text-align: center;
+}
+
+.seo-category-list .active a {
+    background: #3c8dbc;
+    color: #fff;
+}
+
+#image-preview > input {
+    line-height: 200px;
+    font-size: 200px;
+    position: absolute;
+    opacity: 0;
+    z-index: 10;
+}
+
+
+#notifications {
+    display: none;
+}
+
+#notifications-list > li {
+    padding:8px 5px;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+#notifications-list > li > a {
+    padding:5px;
+}
+
+#image-preview > label {
+    position: absolute;
+    z-index: 5;
+    opacity: 0.8;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    line-height: 50px;
+    text-transform: uppercase;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+}

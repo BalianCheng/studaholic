@@ -1,0 +1,28 @@
+<?php
+/**
+ * @Auth: cmz <393418737@qq.com>
+ * default.tpl.php
+ */
+$page_content = '';
+if ($data['p'] > $data['half'] + 1) {
+    $data['params']['p'] = 1;
+    $page_content .= $this->a(1, $this->url($data['controller'], $data['params']) . $data['anchor']) .
+        $this->a(' ... ', 'javascript:void(0)');
+}
+for ($i = $data['p'] - $data['half'], $i = ($i > 0) ? $i : 1, $j = $data['p'] + $data['half'], $j = ($j > $data['total_page']) ? $data['total_page'] : $j; $i <= $j; $i++) {
+    if ($i == $data['p']) {
+        $href = 'javascript:void(0)';
+        $attr = array('class' => 'active');
+    } else {
+        $data['params']['p'] = $i;
+        $attr = array();
+        $href = $this->url($data['controller'], $data['params']) . $data['anchor'];
+    }
+    $page_content .= $this->a($i, $href, $attr);
+}
+if ($data['p'] + $data ['half'] < $data['total_page']) {
+    $data['params']['p'] = $data['total_page'];
+    $page_content .= $this->a(' ... ', 'javascript:void(0)') . $this->a($data['total_page'], $this->url($data['controller'], $data['params']) . $data['anchor']);
+}
+
+echo $this->wrap('div', array('class' => 'title-pagination'))->html($page_content);
